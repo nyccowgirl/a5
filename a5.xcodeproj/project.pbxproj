@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7A14C60E25282ED800DF5BAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A14C60D25282ED800DF5BAB /* main.cpp */; };
+		7A14C60E25282ED800DF5BAB /* a5_1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A14C60D25282ED800DF5BAB /* a5_1.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		7A14C60A25282ED800DF5BAB /* a5_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = a5_1; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A14C60D25282ED800DF5BAB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		7A14C60D25282ED800DF5BAB /* a5_1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = a5_1.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		7A14C60C25282ED800DF5BAB /* a5_1 */ = {
 			isa = PBXGroup;
 			children = (
-				7A14C60D25282ED800DF5BAB /* main.cpp */,
+				7A14C60D25282ED800DF5BAB /* a5_1.cpp */,
 			);
 			path = a5_1;
 			sourceTree = "<group>";
@@ -95,7 +95,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7A14C60525282ED800DF5BAB /* Build configuration list for PBXProject "a5_1" */;
+			buildConfigurationList = 7A14C60525282ED800DF5BAB /* Build configuration list for PBXProject "a5" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7A14C60E25282ED800DF5BAB /* main.cpp in Sources */,
+				7A14C60E25282ED800DF5BAB /* a5_1.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,7 +255,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7A14C60525282ED800DF5BAB /* Build configuration list for PBXProject "a5_1" */ = {
+		7A14C60525282ED800DF5BAB /* Build configuration list for PBXProject "a5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A14C60F25282ED800DF5BAB /* Debug */,

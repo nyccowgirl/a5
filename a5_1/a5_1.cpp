@@ -11,15 +11,17 @@
  for instructions 11 and 21 should be written where the instructions indicate).  I have
  written the first statement for you.
  
- Created by nyccowgirl on 9/24/20.
+ Created by nyccowgirl on 10/2/20.
  Copyright © 2020 nyccowgirl. All rights reserved.
 */
 
 #include <iostream>
 using namespace std;
 
+
 void noNegatives(int *x);
 void swap(int *x, int *y);
+
 
 int main() {
 // 1. Create two integer variables named x and y.

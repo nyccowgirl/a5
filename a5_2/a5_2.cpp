@@ -16,6 +16,7 @@
 */
 
 #include <iostream>
+#include <string>
 #include <utility>
 using namespace std;
 
@@ -55,13 +56,17 @@ int main(int argc, const char * argv[]) {
  Definition of function readData. The function passes in two arrays, names and scores, and
  the size of the arrays. It gets names and scores from the user to store into the respective
  arrays. It assumes that user inputs valid type (e.g., string for name and integer for
- score.
+ score).
 */
 
 void readData(string names[], int scores[], int size) {
     for (int x = 0; x < size; x++) {
+        cin.ignore();
         cout << "Enter the name for score #" << (x + 1) << ": ";
-        cin >> names[x];
+
+        do {
+            getline(cin, names[x]);
+        } while (names[x] == "");
         
         cout << "Enter the score for score #" << (x + 1) << ": ";
         cin >> scores[x];

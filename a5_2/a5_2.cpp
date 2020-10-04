@@ -156,5 +156,26 @@ void displayData(const string names[], const int scores[], int size) {
  Tim: 514
  Program ended with exit code: 0
  
+ How many scores will you enter?: 5
+ Enter the name for score #1: Suzy Q
+ Enter the score for score #1: 666
+ Enter the name for score #2: Kim Kardashian
+ Enter the score for score #2: 9999
+ Enter the name for score #3:
+ Armando
+ Enter the score for score #3: 8888
+ Enter the name for score #4: Tiny Tim
+ Enter the score for score #4: 54321
+ Enter the name for score #5: The Notorious RBG
+ Enter the score for score #5: 11
+
+ Top Scorers:
+ Tiny Tim: 54321
+ Kim Kardashian: 9999
+ Armando: 8888
+ Suzy Q: 666
+ The Notorious RBG: 11
+ Program ended with exit code: 0
+ 
  */
 

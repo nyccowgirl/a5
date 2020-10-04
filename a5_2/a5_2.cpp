@@ -86,7 +86,7 @@ void readData(string names[], int scores[], int size) {
  */
 
 void sortData(string names[], int scores[], int size) {
-    int highIdx;
+    int highIdx;                            // To hold index of highest remaining number
     
     for (int x = 0; x < (size - 1); x++) {
         highIdx = idxOfHigh(scores, x, size);
@@ -107,7 +107,7 @@ void sortData(string names[], int scores[], int size) {
  */
 
 int idxOfHigh(const int scores[], int start, int size) {
-    int target = start;
+    int target = start;                     // To define initial starting index
     
     for (int x = (start + 1); x < size; x++) {
         if (scores[x] > scores[target]) {

@@ -8,8 +8,8 @@
  Assignment 5.2
  
  Program records high-score data for a fictitious game. The program asks user to enter the
- number of scores and indicated number of names and scores. It then prints the names and
- scores sorted by score in descending order.
+ number of scores and the respective indicated number of names and scores. It then prints
+ the names and scores sorted by score in descending order.
  
  Created by nyccowgirl on 10/3/20.
  Copyright © 2020 nyccowgirl. All rights reserved.
@@ -52,15 +52,17 @@ int main(int argc, const char * argv[]) {
 
 
 /*
- Definition of function readData. The functions passes in two arrays, names and scores, and
+ Definition of function readData. The function passes in two arrays, names and scores, and
  the size of the arrays. It gets names and scores from the user to store into the respective
- arrays.
+ arrays. It assumes that user inputs valid type (e.g., string for name and integer for
+ score.
 */
 
 void readData(string names[], int scores[], int size) {
     for (int x = 0; x < size; x++) {
         cout << "Enter the name for score #" << (x + 1) << ": ";
         cin >> names[x];
+        
         cout << "Enter the score for score #" << (x + 1) << ": ";
         cin >> scores[x];
     }
@@ -79,12 +81,12 @@ void readData(string names[], int scores[], int size) {
  */
 
 void sortData(string names[], int scores[], int size) {
-    int target;
+    int highIdx;
     
     for (int x = 0; x < (size - 1); x++) {
-        target = idxOfHigh(scores, x, size);
-        swap(scores[target], scores[x]);
-        swap(names[target], names[x]);
+        highIdx = idxOfHigh(scores, x, size);
+        swap(scores[highIdx], scores[x]);
+        swap(names[highIdx], names[x]);
     }
 }
 
@@ -95,8 +97,8 @@ void sortData(string names[], int scores[], int size) {
 
 /*
  Definition of function idxOfHigh. The function passes in the scores array, a starting
- index and size of the array. It compares the scores and returns the index of the higher
- score.
+ index and size of the array. It compares the remaining scores in the scores array from the
+ starting index and returns the index of the highest score.
  */
 
 int idxOfHigh(const int scores[], int start, int size) {

@@ -60,31 +60,31 @@ int main(int argc, const char * argv[]) {
 */
 
 void readData(string names[], int scores[], int size) {
-//    for (int x = 0; x < size; x++) {
-//        cin.ignore();
-//        cout << "Enter the name for score #" << (x + 1) << ": ";
-//
-//        do {
-//            getline(cin, names[x]);
-//        } while (names[x] == "");
-//
-//        cout << "Enter the score for score #" << (x + 1) << ": ";
-//        cin >> scores[x];
-//    }
-    
-    // Alternative version using pointers
-    
     for (int x = 0; x < size; x++) {
         cin.ignore();
         cout << "Enter the name for score #" << (x + 1) << ": ";
 
         do {
-            getline(cin, *(names + x));
-        } while (*(names + x) == "");
-        
+            getline(cin, names[x]);
+        } while (names[x] == "");
+
         cout << "Enter the score for score #" << (x + 1) << ": ";
-        cin >> *(scores + x);
+        cin >> scores[x];
     }
+    
+//    // Alternative version using pointers
+//
+//    for (int x = 0; x < size; x++) {
+//        cin.ignore();
+//        cout << "Enter the name for score #" << (x + 1) << ": ";
+//
+//        do {
+//            getline(cin, *(names + x));
+//        } while (*(names + x) == "");
+//
+//        cout << "Enter the score for score #" << (x + 1) << ": ";
+//        cin >> *(scores + x);
+//    }
 }
 
 
@@ -102,19 +102,19 @@ void readData(string names[], int scores[], int size) {
 void sortData(string names[], int scores[], int size) {
     int highIdx;                            // To hold index of highest remaining number
     
-//    for (int x = 0; x < (size - 1); x++) {
-//        highIdx = idxOfHigh(scores, x, size);
-//        swap(scores[highIdx], scores[x]);
-//        swap(names[highIdx], names[x]);
-//    }
-    
-    // Alternative version using pointers
-    
     for (int x = 0; x < (size - 1); x++) {
         highIdx = idxOfHigh(scores, x, size);
-        swap(*(scores + highIdx), *(scores + x));
-        swap(*(names + highIdx), *(names + x));
+        swap(scores[highIdx], scores[x]);
+        swap(names[highIdx], names[x]);
     }
+    
+//    // Alternative version using pointers
+//
+//    for (int x = 0; x < (size - 1); x++) {
+//        highIdx = idxOfHigh(scores, x, size);
+//        swap(*(scores + highIdx), *(scores + x));
+//        swap(*(names + highIdx), *(names + x));
+//    }
 }
 
 
@@ -131,19 +131,19 @@ void sortData(string names[], int scores[], int size) {
 int idxOfHigh(const int scores[], int start, int size) {
     int target = start;                     // To define initial starting index
     
-//    for (int x = (start + 1); x < size; x++) {
-//        if (scores[x] > scores[target]) {
-//            target = x;
-//        }
-//    }
-    
-    // Alternative version using pointers
-    
     for (int x = (start + 1); x < size; x++) {
-        if (*(scores + x) > *(scores + target)) {
+        if (scores[x] > scores[target]) {
             target = x;
         }
     }
+    
+//    // Alternative version using pointers
+//
+//    for (int x = (start + 1); x < size; x++) {
+//        if (*(scores + x) > *(scores + target)) {
+//            target = x;
+//        }
+//    }
     
     return target;
 }
@@ -162,15 +162,15 @@ int idxOfHigh(const int scores[], int start, int size) {
 void displayData(const string names[], const int scores[], int size) {
     cout << "\nTop Scorers:" << endl;
     
-//    for (int x = 0; x < size; x++) {
-//        cout << names[x] << ": " << scores[x] << endl;
-//    }
-    
-    // Alternative version using pointers
-    
     for (int x = 0; x < size; x++) {
-        cout << *(names + x) << ": " << *(scores + x) << endl;
+        cout << names[x] << ": " << scores[x] << endl;
     }
+    
+//    // Alternative version using pointers
+//
+//    for (int x = 0; x < size; x++) {
+//        cout << *(names + x) << ": " << *(scores + x) << endl;
+//    }
 }
 
 

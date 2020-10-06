@@ -89,7 +89,8 @@ int main() {
 // 16. Use only p2 and y (not a) to initialize the second element of a with the value of y.
 //     Leave p2 pointing to the first element of a. Don't use pointer arithmetic.
 //     Hint: don't forget that pointers and arrays are the same thing.
-    *(p2 + 1) = y;
+//    *(p2 + 1) = y;
+    p2[1] = y;
     
 // 17. Using cout and p2 only, display the address of the first element in a.
     cout << "#17:  The address of the first element is " << p2 << endl;

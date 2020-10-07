@@ -97,7 +97,7 @@ int main() {
 
 // 18. Using cout and p2 only, display the address of the second element in a. Leave p2
 //     pointing to the first element of a.   Don't use pointer arithmetic.
-    cout << "#18:  The address of the second element is " << (p2 + 1) << endl;
+    cout << "#18:  The address of the second element is " << &p2[1] << endl;
 
 // 19. Use p1, p2, and temp to swap the values in the two elements of array 'a'.
 //     (first point p1 at a[0], then point p2 at a[1], then do not use "a" again. After this
